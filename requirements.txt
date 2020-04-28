@@ -13,5 +13,5 @@ imbalanced-learn==0.6.2
 pickle5 ==0.0.9
 nltk==3.4.5
 tensorflow==2.0.0
-Pillow==1.1.7
+Pillow==6.2.0
 opencv-python==4.2.0.34
