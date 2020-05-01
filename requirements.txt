@@ -13,4 +13,4 @@ imbalanced-learn==0.6.2
 pickle5 ==0.0.9
 tensorflow==2.0.0
 Pillow==6.2.0
-opencv-python==4.2.0.32
+opencv-contrib-python-headless==4.2.0.34
