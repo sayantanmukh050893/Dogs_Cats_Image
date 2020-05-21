@@ -68,13 +68,13 @@ body {
   <body>
     <h1 align="center"Detection of Dogs and Cats</h1>
 
-
+    <div>Upload a photo of dog/cat and let the model predict it's category. For any other category it would only give either cat or dog. So please upload only photo of cats or dogs</div>
     <form align="center" action="{{ url_for('predict_front_end')}}" method="post" enctype="multipart/form-data">
       <input class="custom-file-input" type="file" id="myFile" name="filename">
       <input class="submit-btn" type="submit">
     </form>
     <div class="output-result"><h4 style="color:{{color}};opacity:0.95;filter:alpha(opacity=95)">{{prediction_text}}</h4>
-    <img src="{{image}}" height="400" width="400" style="opacity:0.95;filter:alpha(opacity=95);"></div>
+    <!--<img src="{{image}}" height="400" width="400" style="opacity:0.95;filter:alpha(opacity=95);"></div>-->
     <!--<div align="center"><h3>{{prediction_text}}</h3></div>-->
 
 
