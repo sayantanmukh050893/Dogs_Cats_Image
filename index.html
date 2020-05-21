@@ -2,17 +2,80 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dogs/Cats Classification</title>
+    <title>Detection of Dogs and Cats</title>
+    <!-- <link href="./resources/css/style.css" rel="stylesheet"> -->
+    <style media="screen">
+      html {
+        background: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_706,w_1256,x_0,y_64/f_auto,q_auto,w_1100/v1554995050/shape/mentalfloss/516438-istock-637689912.jpg") no-repeat center fixed;
+        background-color: #cccccc;
+        opacity:0.85;
+        filter:alpha(opacity=85);
+      }
+      h1 {
+        color: blue;
+      }
+      p {
+        color: red;
+      }
+      .submit-btn{
+        font-size: 20px;
+        color: #555555;
+      }
+      .file-browse{
+        font-size: 20px;
+        color: #555555;
+      }
+      .custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Upload Photo';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.output-result{
+  opacity=0.2
+}
+
+body {
+  padding: 20px;
+}
+    </style>
   </head>
   <body>
-    <h1 align="center">Dogs/Cats Classification</h1>
+    <h1 align="center"Detection of Dogs and Cats</h1>
 
 
     <form align="center" action="{{ url_for('predict_front_end')}}" method="post" enctype="multipart/form-data">
-      <input type="file" id="myFile" name="filename">
-      <input type="submit">
+      <input class="custom-file-input" type="file" id="myFile" name="filename">
+      <input class="submit-btn" type="submit">
     </form>
-
+    <div class="output-result"><h4 style="color:{{color}};opacity:0.95;filter:alpha(opacity=95)">{{prediction_text}}</h4>
+    <img src="{{image}}" height="400" width="400" style="opacity:0.95;filter:alpha(opacity=95);"></div>
+    <!--<div align="center"><h3>{{prediction_text}}</h3></div>-->
 
 
   </body>
