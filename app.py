@@ -61,7 +61,7 @@ def predict_front_end():
         result =  "The picture is of a CAT!!!!!"
     elif(pre==1):
         result =  "The picture is of a DOG!!!!!"
-    return render_template("result.html",prediction_text=result)
+    return render_template("index.html",prediction_text=result)
 
 
 if __name__ == "__main__":
